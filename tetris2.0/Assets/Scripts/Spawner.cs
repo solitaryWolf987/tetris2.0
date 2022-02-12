@@ -11,13 +11,10 @@ public class Spawner : MonoBehaviour
         spawnNext();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 
     //Spawns a Block shape out of the prefabs
+    //Blocks are set in the Spawner object in the inspector
     public void spawnNext()
     {
         int i = Random.Range(0, groups.Length);

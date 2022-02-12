@@ -20,7 +20,7 @@ public class SceneSwitcher : MonoBehaviour
     }
     */
 
-
+    //loads the next Level in the build menu
     public void LoadNextLevel()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
