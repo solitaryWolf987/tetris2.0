@@ -8,6 +8,11 @@ public class Spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+    }
+
+    void Awake()
+    {
         spawnNext();
     }
 
@@ -19,6 +24,6 @@ public class Spawner : MonoBehaviour
     {
         int i = Random.Range(0, groups.Length);
 
-        Instantiate(groups[1], transform.position, Quaternion.identity);
+        Instantiate(groups[i], transform.position, Quaternion.identity);
     }
 }
