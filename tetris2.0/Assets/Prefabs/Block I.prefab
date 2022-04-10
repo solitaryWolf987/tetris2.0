@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 1264880029229844182}
   - component: {fileID: 6204579281874109383}
   - component: {fileID: 194407981}
-  - component: {fileID: 194407978}
+  - component: {fileID: 5645902444961741199}
   m_Layer: 0
   m_Name: Block I
   m_TagString: Untagged
@@ -322,7 +322,7 @@ EdgeCollider2D:
   - {x: 0.20959234, y: 1.1127086}
   - {x: 0.20691824, y: -0.67021704}
   - {x: -0.22064209, y: -0.6713352}
---- !u!114 &194407978
+--- !u!114 &5645902444961741199
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -331,10 +331,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6457640087608607106}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e107526d7ee3a144c9c8d97c71e62a62, type: 3}
+  m_Script: {fileID: 11500000, guid: bf4cfc9dfef20ea42b3e0fba548c41ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
 --- !u!1 &8189247430258783553
 GameObject:
   m_ObjectHideFlags: 0

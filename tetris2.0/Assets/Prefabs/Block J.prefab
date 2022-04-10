@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 6398955933546984100}
   - component: {fileID: 1680462978}
   - component: {fileID: 1680462976}
-  - component: {fileID: 1680462975}
+  - component: {fileID: 5858584531231504444}
   m_Layer: 0
   m_Name: Block J
   m_TagString: Untagged
@@ -167,7 +167,7 @@ EdgeCollider2D:
   - {x: -0.45447338, y: -0.44783333}
   - {x: -0.45344532, y: -0.4857562}
   - {x: -0.45324588, y: -0.48793152}
---- !u!114 &1680462975
+--- !u!114 &5858584531231504444
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,10 +176,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3059092112377229485}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e107526d7ee3a144c9c8d97c71e62a62, type: 3}
+  m_Script: {fileID: 11500000, guid: bf4cfc9dfef20ea42b3e0fba548c41ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
 --- !u!1 &3651413415287609095
 GameObject:
   m_ObjectHideFlags: 0

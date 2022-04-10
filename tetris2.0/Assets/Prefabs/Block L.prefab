@@ -91,6 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6241510599883258447}
   - component: {fileID: 5295722275096070246}
+  - component: {fileID: 2520814761930516409}
   m_Layer: 0
   m_Name: Block L
   m_TagString: Untagged
@@ -137,6 +138,18 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &2520814761930516409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2433185084927289028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4cfc9dfef20ea42b3e0fba548c41ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4323157026948495685
 GameObject:
   m_ObjectHideFlags: 0
