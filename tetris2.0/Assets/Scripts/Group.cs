@@ -98,7 +98,6 @@ public class Group : MonoBehaviour
         foreach (Transform child in transform)
         {
             Vector2 v = Playfield.roundVec2(child.position);
-
             // Not inside Border?
             if (!Playfield.insideBorder(v)) 
             {
