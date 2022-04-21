@@ -9,12 +9,12 @@ public class Spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //spawnNext();
+        spawnNext();
     }
 
     void Awake()
     {
-        spawnNext();
+        //spawnNext();
     }
 
     

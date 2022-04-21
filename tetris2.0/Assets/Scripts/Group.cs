@@ -20,7 +20,7 @@ public class Group : MonoBehaviour
     void Update()
     {
         // Left
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             transform.position += new Vector3(-1, 0, 0);
             if (isValidGridPos())
@@ -33,7 +33,7 @@ public class Group : MonoBehaviour
             }
         }
         // Right
-        else if (Input.GetKeyDown(KeyCode.D))
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             // Modify position
             transform.position += new Vector3(1, 0, 0);
@@ -51,7 +51,7 @@ public class Group : MonoBehaviour
             }
         }
         // Rotate
-        else if (Input.GetKeyDown(KeyCode.W))
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             transform.Rotate(0, 0, -90);
 
@@ -68,7 +68,7 @@ public class Group : MonoBehaviour
             }
         }
         // Fall
-        else if (Input.GetKeyDown(KeyCode.S) || Time.time - lastFall >= 1) {
+        else if (Input.GetKeyDown(KeyCode.DownArrow) || Time.time - lastFall >= 1) {
             // Modify position
             transform.position += new Vector3(0, -1, 0);
             // See if valid
@@ -101,11 +101,13 @@ public class Group : MonoBehaviour
             // Not inside Border?
             if (!Playfield.insideBorder(v)) 
             {
+                Debug.Log("not in playfield");
                 return false;
             }
 
             // Block in grid cell (and not part of same group)?
-            if (Playfield.grid[(int)v.x, (int)v.y] != null && Playfield.grid[(int)v.x, (int)v.y].parent != transform) 
+            if (Playfield.grid[(int)v.x, (int)v.y] != null && 
+                Playfield.grid[(int)v.x, (int)v.y].parent != transform) 
             {
                 return false;
             }         

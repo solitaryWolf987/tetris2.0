@@ -15,7 +15,7 @@ public class Playfield : MonoBehaviour
 
     public static bool insideBorder(Vector2 pos)
     {
-        return ((int)pos.x <= 0 &&
+        return ((int)pos.x >= 0 &&
                 (int)pos.x < w &&
                 (int)pos.y >= 0);
     }
@@ -76,17 +76,5 @@ public class Playfield : MonoBehaviour
                 --y;
             }
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
