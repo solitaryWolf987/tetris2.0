@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ScoringSystem : MonoBehaviour
 {
     private float currentScore;
-    public Text scoreText;
+    public TextMesh scoreText;
     public float pointsPerSecond = 10;
 
 
@@ -14,6 +14,7 @@ public class ScoringSystem : MonoBehaviour
     void Start()
     {
         currentScore = 0;
+        scoreText.text = "Score: ";
     }
 
     // Update is called once per frame
