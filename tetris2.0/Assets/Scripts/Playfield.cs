@@ -67,17 +67,22 @@ public class Playfield : MonoBehaviour
 
     public static void deleteFullRows()
     {
-        ScoringSystem scoringSystem = new ScoringSystem();
         for (int y = 0; y < h; ++y)
         {
             if (isRowFull(y))
             {
                 deleteRow(y);
                 decreaseRowsAbove(y + 1);
-                
-                scoringSystem.IncreaseScore(100);
+
+                scoreIncrease();
                 --y;
             } 
         }
+    }
+
+    public static void scoreIncrease()
+    {
+        
+        ScoringSystem.instance.IncreaseScore(100);
     }
 }

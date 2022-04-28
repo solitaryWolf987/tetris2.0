@@ -2,36 +2,54 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ScoringSystem : MonoBehaviour
 {
-    private float currentScore;
-    public TextMesh scoreText;
-    public float pointsPerSecond = 10;
+    public static ScoringSystem instance;
+
+    public Text scoreText;
+
+    float pointsPerSecond = 1;
+    float currentScore = 0;
+    float lastUpdate = 0;
+
+    private void Awake() 
+    {
+        instance = this;
+    }
 
 
     // Start is called before the first frame update
     void Start()
     {
-        currentScore = 0;
-        scoreText.text = "Score: ";
+        scoreText.text = "Score: " + currentScore.ToString();
+
+        
+            
     }
 
     // Update is called once per frame
     void Update()
     {
-        //score += pointsPerSecond * Time.deltaTime;
+        if (Time.time - lastUpdate >= 1f)
+        {
+            ScorePerSecond();
+            lastUpdate = Time.time;
+        }
     }
 
     public void IncreaseScore(float amount)
     {
         currentScore += amount;
-        HandleScore();
+        Debug.Log(currentScore);
+        scoreText.text = "Score: " + currentScore.ToString();
     }
 
-    private void HandleScore()
+    private void ScorePerSecond()
     {
-        scoreText.text = "Score: " + currentScore;
+        currentScore += pointsPerSecond;
+        scoreText.text = "Score: " + currentScore.ToString();
     }
 
     
