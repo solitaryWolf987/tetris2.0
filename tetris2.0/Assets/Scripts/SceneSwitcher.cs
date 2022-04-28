@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitcher : MonoBehaviour
 {
+    public static SceneSwitcher instance;
+
     public float autoLoadNextLevelAfter;
 
     

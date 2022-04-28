@@ -83,6 +83,6 @@ public class Playfield : MonoBehaviour
     public static void scoreIncrease()
     {
         
-        ScoringSystem.instance.IncreaseScore(100);
+        ScoringSystem.instance.IncreaseScore(50);
     }
 }

@@ -5,9 +5,13 @@ using UnityEngine;
 public class Group : MonoBehaviour
 {
     float lastFall = 0;
+    //float RecordedTime1 = 0;
+    //float RecordedTime2 = 0;
+    //float TimePassed = 0;
     // Start is called before the first frame update
     void Start()
     {
+        
         // Default position not valid? Then it's game over
         if (!isValidGridPos())
         {
@@ -19,6 +23,9 @@ public class Group : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //RecordedTime1 += 1f;
+        //TimePassed = RecordedTime1 - RecordedTime2;
+        
         // Left
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
@@ -69,8 +76,11 @@ public class Group : MonoBehaviour
         }
         // Fall
         else if (Input.GetKeyDown(KeyCode.DownArrow) || Time.time - lastFall >= 1) {
+
+            
             // Modify position
             transform.position += new Vector3(0, -1, 0);
+            //Debug.Log("Falling");
             // See if valid
             if (isValidGridPos())
             {
@@ -89,8 +99,9 @@ public class Group : MonoBehaviour
                 enabled = false;
             }
             lastFall = Time.time;
+            
         }
-
+        //RecordedTime2 += 0.997f;
     }
 
     bool isValidGridPos()
