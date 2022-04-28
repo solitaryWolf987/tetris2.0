@@ -6,7 +6,7 @@ public class ExtraPoints : MonoBehaviour
 {
 
     Vector2 randomPosition;
-    score = ScoringSystem.instance;
+    public GameObject image;
     public float xRange = 7f;
     public float yRange = 13f;
 
@@ -19,12 +19,14 @@ public class ExtraPoints : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (score.getCurrentScore() == 1000f)
+       
+        if (ScoringSystem.instance.getCurrentScore() >= 100f && ScoringSystem.instance.getCurrentScore() <= 101f)
         {
-            float xPosition = Random.Range(0 - xRange, 0 + xRange);
-            float yPosition = Random.Range(0 - yRange, 0 + yRange);
+            float xPosition = Random.Range(0, xRange);
+            float yPosition = Random.Range(0, yRange);
             randomPosition = new Vector2(xPosition, yPosition);
             transform.position = randomPosition;
+            Instantiate(image, transform.position, Quaternion.identity);
         }
     }
 }
