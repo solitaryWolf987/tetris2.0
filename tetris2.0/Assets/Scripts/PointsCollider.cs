@@ -8,5 +8,6 @@ public class PointsCollider : MonoBehaviour
     {
         Debug.Log("Star collide");
         ScoringSystem.instance.IncreaseScore(50);
+        ExtraPoints.instance.destroyStar();
     }
 }
