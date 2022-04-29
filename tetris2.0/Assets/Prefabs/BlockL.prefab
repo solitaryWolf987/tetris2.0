@@ -334,8 +334,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3837192262903463232}
   - component: {fileID: 1170561814164996271}
-  - component: {fileID: -2910117634571110570}
   - component: {fileID: -5695271075606794003}
+  - component: {fileID: 501821357426619774}
   m_Layer: 0
   m_Name: BlockL
   m_TagString: Untagged
@@ -373,29 +373,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf4cfc9dfef20ea42b3e0fba548c41ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!68 &-2910117634571110570
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8205503215074631268}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -0.44295704, y: -1.4189401}
-  - {x: -0.43887916, y: 1.4590058}
-  - {x: 0.45209122, y: 1.4443223}
-  - {x: 0.4531288, y: -0.56104016}
-  - {x: 1.4593234, y: -0.56356275}
-  - {x: 1.4594744, y: -1.4343894}
-  - {x: -0.42694575, y: -1.4260706}
 --- !u!114 &-5695271075606794003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -408,3 +385,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7632f5330b74942aee469b72e5cd28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &501821357426619774
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8205503215074631268}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.50566924, y: -0.5027293}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.8819811, y: 2.8874395}
+  m_EdgeRadius: 0

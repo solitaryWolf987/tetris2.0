@@ -5,13 +5,14 @@ using UnityEngine;
 public class ExtraPoints : MonoBehaviour
 {
     public static ExtraPoints instance;
+
     Vector2 randomPosition;
     public GameObject image;
     public float xRange = 7f;
     public float yRange = 11f;
     private bool hasSpawned = false;
-    float targetScore = 100;
-    GameObject gameObject = null;
+    private float targetScore = 100;
+    private GameObject gameObject = null;
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +33,6 @@ public class ExtraPoints : MonoBehaviour
                 randomPosition = new Vector2(xPosition, yPosition);
                 transform.position = randomPosition;
                 gameObject = Instantiate(image, transform.position, Quaternion.identity);
-                Instantiate(image, transform.position, Quaternion.identity);
                 targetScore += 100;
                 hasSpawned = true;
                 
@@ -43,8 +43,12 @@ public class ExtraPoints : MonoBehaviour
 
     public void destroyStar()
     {
+
+        Debug.Log("destroy");
+        /*
         Destroy(gameObject);
         hasSpawned = false;
+        */
     }
 
 
