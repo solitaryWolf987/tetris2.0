@@ -20,9 +20,15 @@ public class Group : MonoBehaviour
         }
     }
 
+    void Awake()
+    {
+        lastFall = 0;
+    }
+
     // Update is called once per frame
     void Update()
     {
+        
         //RecordedTime1 += 1f;
         //TimePassed = RecordedTime1 - RecordedTime2;
         
@@ -77,7 +83,9 @@ public class Group : MonoBehaviour
         // Fall
         else if (Input.GetKeyDown(KeyCode.DownArrow) || Time.time - lastFall >= 1) {
 
-            
+            //Debug.Log("Time: " + Time.time);
+           // Debug.Log("lastFall: " + lastFall);
+            //Debug.Log(Time.time - lastFall);
             // Modify position
             transform.position += new Vector3(0, -1, 0);
             //Debug.Log("Falling");
@@ -99,7 +107,7 @@ public class Group : MonoBehaviour
                 enabled = false;
             }
             lastFall = Time.time;
-            
+            //Debug.Log("lastFall 2: " + lastFall);
         }
         //RecordedTime2 += 0.997f;
     }

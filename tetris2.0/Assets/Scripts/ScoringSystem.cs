@@ -32,7 +32,7 @@ public class ScoringSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time - lastUpdate >= 1f)
+        if (Time.time - lastUpdate >= 3f)
         {
             ScorePerSecond();
             lastUpdate = Time.time;

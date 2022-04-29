@@ -9,6 +9,7 @@ public class ExtraPoints : MonoBehaviour
     public GameObject image;
     public float xRange = 7f;
     public float yRange = 13f;
+    private bool hasSpawned = false;
 
     // Start is called before the first frame update
     void Start()
@@ -20,13 +21,19 @@ public class ExtraPoints : MonoBehaviour
     void Update()
     {
        
-        if (ScoringSystem.instance.getCurrentScore() >= 100f && ScoringSystem.instance.getCurrentScore() <= 101f)
+        if (ScoringSystem.instance.getCurrentScore() >= 100f)
         {
-            float xPosition = Random.Range(0, xRange);
-            float yPosition = Random.Range(0, yRange);
-            randomPosition = new Vector2(xPosition, yPosition);
-            transform.position = randomPosition;
-            Instantiate(image, transform.position, Quaternion.identity);
+            if (hasSpawned == false)
+            {
+                float xPosition = Random.Range(3, xRange);
+                float yPosition = Random.Range(3, yRange);
+                randomPosition = new Vector2(xPosition, yPosition);
+                transform.position = randomPosition;
+                Instantiate(image, transform.position, Quaternion.identity);
+                hasSpawned = true;
+            }
         }
     }
+
+
 }
