@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5954540152844584414}
   - component: {fileID: 3318535771453425691}
+  - component: {fileID: 6312869594207703930}
+  - component: {fileID: -6575312949626466681}
   m_Layer: 0
   m_Name: StarExtraPoints
   m_TagString: Untagged
@@ -81,3 +83,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!68 &6312869594207703930
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7599410410320961350}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -15.167778, y: -8.312161}
+  - {x: -18.368774, y: -28.550482}
+  - {x: 0.13883209, y: -18.979916}
+  - {x: 18.710924, y: -28.539865}
+  - {x: 14.6927595, y: -8.121953}
+  - {x: 29.228186, y: 6.473587}
+  - {x: 9.415142, y: 9.706542}
+  - {x: -0.06957722, y: 28.239801}
+  - {x: -8.941069, y: 9.363284}
+  - {x: -30.21271, y: 6.611679}
+  - {x: -14.828315, y: -7.950782}
+--- !u!50 &-6575312949626466681
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7599410410320961350}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

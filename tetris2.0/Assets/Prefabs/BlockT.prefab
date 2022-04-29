@@ -334,6 +334,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2409991606939251640}
   - component: {fileID: 1794768404798979406}
+  - component: {fileID: 50343407674657829}
+  - component: {fileID: 3605216223770062654}
   m_Layer: 0
   m_Name: BlockT
   m_TagString: Untagged
@@ -369,5 +371,42 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf4cfc9dfef20ea42b3e0fba548c41ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!68 &50343407674657829
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9190346783799240818}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -1.4596004, y: -0.43807834}
+  - {x: -1.4598689, y: 0.4436831}
+  - {x: 1.4561703, y: 0.43961954}
+  - {x: 1.4572766, y: -0.4356785}
+  - {x: 0.46253687, y: -0.43529686}
+  - {x: 0.4543093, y: -1.4262077}
+  - {x: -0.4528211, y: -1.4345953}
+  - {x: -0.4497945, y: -0.42744234}
+  - {x: -1.4400619, y: -0.4276476}
+--- !u!114 &3605216223770062654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9190346783799240818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c7632f5330b74942aee469b72e5cd28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
