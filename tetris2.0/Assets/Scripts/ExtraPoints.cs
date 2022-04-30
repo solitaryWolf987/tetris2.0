@@ -14,10 +14,16 @@ public class ExtraPoints : MonoBehaviour
     private float targetScore = 100;
     private GameObject starObject;
 
+
     // Start is called before the first frame update
     void Start()
     {
         
+    }
+
+    void Awake()
+    {
+        instance = this;
     }
 
     // Update is called once per frame
@@ -37,8 +43,11 @@ public class ExtraPoints : MonoBehaviour
                 Debug.Log(starObject.name);
                 targetScore += 100;
                 hasSpawned = true;
+
                 
+
             }
+            //Object.Destroy(image, 5f);
         }
     }
 
@@ -49,6 +58,8 @@ public class ExtraPoints : MonoBehaviour
         Debug.Log("destroy");
         hasSpawned = false;
     }
+
+    
 
 
 }

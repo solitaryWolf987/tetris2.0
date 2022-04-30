@@ -18,8 +18,8 @@ public class PointsCollider : MonoBehaviour
     public static void starDestroy()
     {
         
-        ExtraPoints extraPoints = new ExtraPoints();
-        extraPoints.destroyStar();
+        
+        ExtraPoints.instance.destroyStar();
 
         /*
         GameObject gameObject = new GameObject("ExtraPoints");
