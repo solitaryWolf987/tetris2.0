@@ -39,6 +39,7 @@ public class TimerScript : MonoBehaviour
                 Debug.Log("Time has run out!");
                 timeRemaining = 0;
                 DisplayTime(timeRemaining);
+                EndGame();
                 timerIsRunning = false;
             }
         }
@@ -57,5 +58,11 @@ public class TimerScript : MonoBehaviour
         timeRemaining += timeAmount;
         Debug.Log("Time after: " + timeRemaining);
         DisplayTime(timeRemaining);
+    }
+
+    public void EndGame()
+    {
+        GameOverScreen.instance.End();
+        Debug.Log("Game over");
     }
 }
