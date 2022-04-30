@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3095895686182147887}
   - component: {fileID: 2772439380322037004}
-  - component: {fileID: -3289574135612450523}
   - component: {fileID: 169606609200209091}
+  - component: {fileID: -7795671671953249773}
   m_Layer: 0
   m_Name: BlockJ
   m_TagString: Untagged
@@ -49,18 +49,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf4cfc9dfef20ea42b3e0fba548c41ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-3289574135612450523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 90033884122529702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c7632f5330b74942aee469b72e5cd28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &169606609200209091
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -71,7 +59,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.49390948, y: 0}
@@ -87,6 +75,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.8819811, y: 2.9050798}
   m_EdgeRadius: 0
+--- !u!114 &-7795671671953249773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90033884122529702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c7632f5330b74942aee469b72e5cd28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3053717823814402357
 GameObject:
   m_ObjectHideFlags: 0

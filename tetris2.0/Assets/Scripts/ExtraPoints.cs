@@ -12,7 +12,7 @@ public class ExtraPoints : MonoBehaviour
     public float yRange = 11f;
     private bool hasSpawned = false;
     private float targetScore = 100;
-    private GameObject gameObject = null;
+    private GameObject starObject;
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +32,9 @@ public class ExtraPoints : MonoBehaviour
                 float yPosition = Random.Range(3, yRange);
                 randomPosition = new Vector2(xPosition, yPosition);
                 transform.position = randomPosition;
-                gameObject = Instantiate(image, transform.position, Quaternion.identity);
+                starObject = Instantiate(image, transform.position, Quaternion.identity);
+                starObject.name = "Star game object";
+                Debug.Log(starObject.name);
                 targetScore += 100;
                 hasSpawned = true;
                 
@@ -45,10 +47,7 @@ public class ExtraPoints : MonoBehaviour
     {
 
         Debug.Log("destroy");
-        /*
-        Destroy(gameObject);
         hasSpawned = false;
-        */
     }
 
 

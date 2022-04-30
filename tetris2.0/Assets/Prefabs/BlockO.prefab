@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4684238871169490458}
   - component: {fileID: 9120864998528531130}
   - component: {fileID: 4237180717722123460}
-  - component: {fileID: -2296006088747001228}
+  - component: {fileID: -8235151844901202723}
   m_Layer: 0
   m_Name: BlockO
   m_TagString: Untagged
@@ -59,7 +59,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.50458497, y: 0.50079095}
@@ -75,7 +75,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9029413, y: 1.9105289}
   m_EdgeRadius: 0
---- !u!114 &-2296006088747001228
+--- !u!114 &-8235151844901202723
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
