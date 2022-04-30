@@ -32,5 +32,14 @@ public class GameOverScreen : MonoBehaviour
     {
         endScore = ScoringSystem.instance.getCurrentScore();
         scoreText.text = "Score: " + endScore.ToString();
+        float highScore = PlayerPrefs.GetFloat("highScore");
+        if (endScore > highScore)
+        {
+
+            PlayerPrefs.SetFloat("highScore", endScore);
+            PlayerPrefs.Save();
+        }
+
     }
+    
 }

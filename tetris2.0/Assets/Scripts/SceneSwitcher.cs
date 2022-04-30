@@ -9,24 +9,18 @@ public class SceneSwitcher : MonoBehaviour
 
     public float autoLoadNextLevelAfter;
 
-    
-    /**
-     void Start() {
-        if (autoLoadNextLevelAfter <= 0)
-        {
-            Debug.Log("Level auto load disabled, use a positive value.");
-        }
-        else {
-            invoke("LoadNextLevel", autoLoadNextLevelAfter);
-        }
+
+    void Awake()
+    {
+        instance = this;
     }
-    */
 
     //loads the next Level in the build menu
     public void LoadNextLevel()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex + 1);
+
     }
     //specific level to load; named on the button UI
     public void LoadScene(string sceneName)
@@ -36,7 +30,7 @@ public class SceneSwitcher : MonoBehaviour
     //quit application
     public void QuitRequest()
     {
-        Debug.Log("Quit Requested");
-        //SceneManager.Quit ();
+        Application.Quit();
+        Debug.Log("Quit request complete");
     }
 }
