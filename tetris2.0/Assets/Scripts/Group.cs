@@ -82,7 +82,7 @@ public class Group : MonoBehaviour
             }
         }
         // Fall
-        else if (Input.GetKeyDown(KeyCode.DownArrow) || Time.time - lastFall >= 1) {
+        else if (Input.GetKeyDown(KeyCode.DownArrow) || Time.timeSinceLevelLoad - lastFall >= 1) {
 
             //Debug.Log("Time: " + Time.time);
            // Debug.Log("lastFall: " + lastFall);
@@ -107,7 +107,7 @@ public class Group : MonoBehaviour
                 // Disable script
                 enabled = false;
             }
-            lastFall = Time.time;
+            lastFall = Time.timeSinceLevelLoad;
             //Debug.Log("lastFall 2: " + lastFall);
         }
         //RecordedTime2 += 0.997f;
