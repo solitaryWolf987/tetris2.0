@@ -6,7 +6,7 @@ using TMPro;
 
 public class TimerScript : MonoBehaviour
 {
-
+    public static TimerScript instance;
     public float timeRemaining = 120;
     public bool timerIsRunning = false;
     public Text timeText;
@@ -19,6 +19,7 @@ public class TimerScript : MonoBehaviour
 
     void Awake()
     {
+        instance = this;
         timeRemaining = 120;
         timerIsRunning = true;
     }
@@ -48,5 +49,13 @@ public class TimerScript : MonoBehaviour
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
         timeText.text = string.Format("Timer: {0:00}:{1:00}", minutes, seconds);
+    }
+
+    public void AddTime(float timeAmount)
+    {
+        Debug.Log("Time before: " + timeRemaining);
+        timeRemaining += timeAmount;
+        Debug.Log("Time after: " + timeRemaining);
+        DisplayTime(timeRemaining);
     }
 }

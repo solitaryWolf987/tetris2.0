@@ -9,8 +9,8 @@ public class PointsCollider : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Star collide");
-        ScoringSystem.instance.IncreaseScore(50);
-        Destroy(collision.gameObject, 1.0f);
+        ScoringSystem.instance.IncreaseScore(10);
+        Destroy(this.gameObject, 1.0f);
         starDestroy();
 
     }
