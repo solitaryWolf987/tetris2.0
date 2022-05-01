@@ -5,37 +5,45 @@ using UnityEngine.UI;
 
 public class MusicManager : MonoBehaviour
 {
-    //public AudioClip[] levelMusicChangeArray;
+    
     private AudioSource audioSource;
-    private float musicVolume = 0.8f;
-    public Slider volumeSlider = null;
+    private float musicVolume = 1f;
+    public Slider volumeSlider;
     public GameObject MusicObject;
     
 
 
     private void Start()
     {
+        //Get Object Tag
         MusicObject = GameObject.FindWithTag("music");
         audioSource = MusicObject.GetComponent<AudioSource>();
 
-        //musicVolume = PlayerPrefs.GetFloat("volume");
+        //Set volume
+        musicVolume = PlayerPrefs.GetFloat("volume");
         audioSource.volume = musicVolume;
         volumeSlider.value = musicVolume;
-
+        
     }
-   
+
 
     void Update()
     {
+        
         audioSource.volume = musicVolume;
-        //PlayerPrefs.SetFloat("volume", musicVolume);
+        PlayerPrefs.SetFloat("volume", musicVolume);
     }
    
-    public void SetVolume (float volume)
+    public void updateVolume (float volume)
     {
         musicVolume = volume;
     }
 
-
+    public void MusicRest()
+    {
+        PlayerPrefs.DeleteKey("volume");
+        audioSource.volume = 1f;
+        volumeSlider.value = 1f;
+    }
 
 }
