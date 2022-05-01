@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Achievements : MonoBehaviour
 {
+    public static Achievements instance;
 
     private bool hundredPoints = false;
     private bool fiveHundredPoints = false;
@@ -13,6 +14,12 @@ public class Achievements : MonoBehaviour
     private bool extraTime = false;
     private bool tenExtraTime = false;
     private int extraTimeCounter = 0;
+
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     public void HundredPoints()
     {
