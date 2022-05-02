@@ -10,10 +10,10 @@ public class Achievements : MonoBehaviour
     private bool fiveHundredPoints = false;
     private bool extraPoints = false;
     private bool tenExtraPoints = false;
-    private int extraPointsCounter = 0;
+    //private int extraPointsCounter = 0;
     private bool extraTime = false;
     private bool tenExtraTime = false;
-    private int extraTimeCounter = 0;
+    //private int extraTimeCounter = 0;
     private bool endGameFirstTime = false;
 
 
@@ -53,18 +53,14 @@ public class Achievements : MonoBehaviour
             Debug.Log("Achievement: First extra points!");
             extraPoints = true;
         }
-        extraPointsCounter++;
     }
 
     public void TenExtraPoints()
     {
         if (!tenExtraPoints)
         {
-            if (extraPointsCounter == 10)
-            {
-                Debug.Log("Achievement: Ten extra points tokens caught!");
-                tenExtraPoints = true;
-            }
+            Debug.Log("Achievement: Ten extra points tokens caught!");
+            tenExtraPoints = true;
         }
     }
 
@@ -75,18 +71,14 @@ public class Achievements : MonoBehaviour
             Debug.Log("Achievement: First extra time!");
             extraTime = true;
         }
-        extraTimeCounter++;
     }
 
     public void TenExtraTime()
     {
         if (!tenExtraTime)
         {
-            if (extraTimeCounter == 10)
-            {
-                Debug.Log("Achievement: Ten extra time tokens caught!");
-                tenExtraTime = true;
-            }
+            Debug.Log("Achievement: Ten extra time tokens caught!");
+            tenExtraTime = true;
         }
     }
 

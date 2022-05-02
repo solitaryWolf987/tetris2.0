@@ -44,7 +44,7 @@ public class ScoringSystem : MonoBehaviour
         currentScore += amount;
         Debug.Log(currentScore);
         scoreText.text = "Score: " + currentScore.ToString();
-        //achievements();
+        achievements();
     }
 
     private void ScorePerSecond()
