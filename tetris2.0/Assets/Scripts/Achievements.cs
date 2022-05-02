@@ -14,6 +14,7 @@ public class Achievements : MonoBehaviour
     private bool extraTime = false;
     private bool tenExtraTime = false;
     private int extraTimeCounter = 0;
+    private bool endGameFirstTime = false;
 
 
     void Awake()
@@ -25,8 +26,11 @@ public class Achievements : MonoBehaviour
     {
         if (!hundredPoints)
         {
-            Debug.Log("Achievement: First 100 points!");
-            hundredPoints = true;
+            if (ScoringSystem.instance.getCurrentScore() >= 100)
+            {
+                Debug.Log("Achievement: First 100 points!");
+                hundredPoints = true;
+            } 
         }
     }
 
@@ -34,8 +38,11 @@ public class Achievements : MonoBehaviour
     {
         if (!fiveHundredPoints)
         {
-            Debug.Log("Achievement: 500 points obtained!");
-            fiveHundredPoints = true;
+            if (ScoringSystem.instance.getCurrentScore() >= 500)
+            {
+                Debug.Log("Achievement: 500 points obtained!");
+                fiveHundredPoints = true;
+            }
         }
     }
 
@@ -59,7 +66,6 @@ public class Achievements : MonoBehaviour
                 tenExtraPoints = true;
             }
         }
-        
     }
 
     public void ExtraTime()
@@ -81,6 +87,16 @@ public class Achievements : MonoBehaviour
                 Debug.Log("Achievement: Ten extra time tokens caught!");
                 tenExtraTime = true;
             }
+        }
+    }
+
+
+    public void EndGameFirstTime()
+    {
+        if (!endGameFirstTime)
+        {
+            Debug.Log("Achievement: Game Over for the first time!");
+            endGameFirstTime = true;
         }
     }
 

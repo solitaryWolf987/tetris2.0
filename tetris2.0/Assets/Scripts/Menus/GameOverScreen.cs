@@ -26,6 +26,7 @@ public class GameOverScreen : MonoBehaviour
         Time.timeScale = 0f;
         GameOver = true;
         showEndScore();
+        //Achievements.instance.EndGameFirstTime();
     }
 
     public void showEndScore()
@@ -35,7 +36,6 @@ public class GameOverScreen : MonoBehaviour
         float highScore = PlayerPrefs.GetFloat("highScore");
         if (endScore > highScore)
         {
-
             PlayerPrefs.SetFloat("highScore", endScore);
             PlayerPrefs.Save();
         }

@@ -4,27 +4,19 @@ using UnityEngine;
 
 public class PointsCollider : MonoBehaviour
 {
-    
+
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Star collide");
         ScoringSystem.instance.IncreaseScore(10);
         Destroy(this.gameObject, 1.0f);
-        starDestroy();
-
+        //ExtraPoints.instance.destroyStar();
     }
 
-    public static void starDestroy()
+    private void achievements()
     {
-        
-        
-        ExtraPoints.instance.destroyStar();
-
-        /*
-        GameObject gameObject = new GameObject("ExtraPoints");
-        extraPoints = gameObject.AddComponent<ExtraPoints>();
-        extraPoints.destroyStar();
-        */
+        Achievements.instance.ExtraPoints();
+        Achievements.instance.TenExtraTime();
     }
 }
