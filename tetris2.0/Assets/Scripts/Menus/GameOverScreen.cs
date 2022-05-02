@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+/**
+ * Class to show the game over screen when the function End() is called.
+ */
+
 public class GameOverScreen : MonoBehaviour
 {
     public static GameOverScreen instance;
@@ -26,9 +30,12 @@ public class GameOverScreen : MonoBehaviour
         Time.timeScale = 0f;
         GameOver = true;
         showEndScore();
-        //Achievements.instance.EndGameFirstTime();
+        Achievements.instance.EndGameFirstTime();
     }
 
+
+    //Shows end score
+    //Sets highscore if it is beaten
     public void showEndScore()
     {
         endScore = ScoringSystem.instance.getCurrentScore();

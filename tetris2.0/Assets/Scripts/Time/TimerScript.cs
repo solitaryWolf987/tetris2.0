@@ -4,6 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+/**
+ * Class to track the time left in the game.
+ * Displays the time left on the screen as well.
+ */
+
 public class TimerScript : MonoBehaviour
 {
     public static TimerScript instance;
@@ -45,6 +50,7 @@ public class TimerScript : MonoBehaviour
         }
     }
 
+    //Displays time in minutes and seconds.
     void DisplayTime(float timeToDisplay)
     {
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
@@ -52,14 +58,14 @@ public class TimerScript : MonoBehaviour
         timeText.text = string.Format("Timer: {0:00}:{1:00}", minutes, seconds);
     }
 
+    //Adds extra time to the imeRemaining variable when called.
     public void AddTime(float timeAmount)
     {
-        Debug.Log("Time before: " + timeRemaining);
         timeRemaining += timeAmount;
-        Debug.Log("Time after: " + timeRemaining);
         DisplayTime(timeRemaining);
     }
 
+    //Makes the game over screen show when called.
     public void EndGame()
     {
         GameOverScreen.instance.End();

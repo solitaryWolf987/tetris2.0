@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * Class to create various achievements in the game.
+ * They only show in the console that the user has got the achievements.
+ */
+
 public class Achievements : MonoBehaviour
 {
     public static Achievements instance;
@@ -10,10 +15,8 @@ public class Achievements : MonoBehaviour
     private bool fiveHundredPoints = false;
     private bool extraPoints = false;
     private bool tenExtraPoints = false;
-    //private int extraPointsCounter = 0;
     private bool extraTime = false;
     private bool tenExtraTime = false;
-    //private int extraTimeCounter = 0;
     private bool endGameFirstTime = false;
 
 

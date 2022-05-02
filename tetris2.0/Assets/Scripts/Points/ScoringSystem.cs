@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+/**
+ * Class to keep the score of the game.
+ */
+
 public class ScoringSystem : MonoBehaviour
 {
     public static ScoringSystem instance;
@@ -39,14 +43,15 @@ public class ScoringSystem : MonoBehaviour
         }
     }
 
+    //Increases score by an amount passed into the function.
     public void IncreaseScore(float amount)
     {
         currentScore += amount;
-        Debug.Log(currentScore);
         scoreText.text = "Score: " + currentScore.ToString();
         achievements();
     }
 
+    //Updates the score by one every second.
     private void ScorePerSecond()
     {
         currentScore += pointsPerSecond;
@@ -55,13 +60,14 @@ public class ScoringSystem : MonoBehaviour
 
     
 
-
+    //Returns the current score.
     public float getCurrentScore() 
     {
         return currentScore;
     }
     
 
+    //Calls achievements if the conditions are met.
     private void achievements()
     {
         Achievements.instance.HundredPoints();

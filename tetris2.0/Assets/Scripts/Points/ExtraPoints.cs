@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * Class to spawn and remove the extra points sprites.
+ */
+
 public class ExtraPoints : MonoBehaviour
 {
     public static ExtraPoints instance;
@@ -29,7 +33,9 @@ public class ExtraPoints : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+       /**
+        * Spawns the sprite in a random location on the game board
+        */
         if (ScoringSystem.instance.getCurrentScore() >= targetScore)
         {
             if (hasSpawned == false)
@@ -40,22 +46,21 @@ public class ExtraPoints : MonoBehaviour
                 transform.position = randomPosition;
                 starObject = Instantiate(image, transform.position, Quaternion.identity);
                 starObject.name = "Star game object";
-                Debug.Log(starObject.name);
+                //Debug.Log(starObject.name);
                 targetScore += 100;
                 hasSpawned = true;
 
                 
 
             }
-            //Object.Destroy(image, 5f);
         }
     }
 
-
+    //Lets the update method know that the sprite can be spawned again when the condition is met
     public void destroyStar()
     {
 
-        Debug.Log("destroy");
+        //Debug.Log("destroy");
         hasSpawned = false;
     }
 

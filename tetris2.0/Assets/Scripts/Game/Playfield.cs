@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * Class to create the playfield of the game.
+ */
+
+
 public class Playfield : MonoBehaviour
 {
     public static int w = 10;
@@ -13,6 +18,7 @@ public class Playfield : MonoBehaviour
         return new Vector2(Mathf.Round(v.x), Mathf.Round(v.y));
     }
 
+    //Checks if the blocks are inside the border of the game
     public static bool insideBorder(Vector2 pos)
     {
         return ((int)pos.x >= 0 &&
@@ -20,6 +26,7 @@ public class Playfield : MonoBehaviour
                 (int)pos.y >= 0);
     }
 
+    //Deletes specific row when called.
     public static void deleteRow(int y)
     {
         for (int x = 0; x < w; ++x)
@@ -29,6 +36,7 @@ public class Playfield : MonoBehaviour
         }
     }
 
+    //Moves rows down one when row below is deleted.
     public static void decreaseRow(int y)
     {
         for (int x = 0; x < w; ++x)
@@ -45,6 +53,7 @@ public class Playfield : MonoBehaviour
         }
     }
 
+    //Moves rows down one when row below are decreased.
     public static void decreaseRowsAbove(int y)
     {
         for (int i = y; i < h; ++i)
@@ -53,6 +62,7 @@ public class Playfield : MonoBehaviour
         }
     }
 
+    //Checks if the row provided is full.
     public static bool isRowFull(int y)
     {
         for (int x = 0; x < w; ++x)
@@ -65,6 +75,7 @@ public class Playfield : MonoBehaviour
         return true;
     }
 
+    //Calls all functions required for the deletion of a row.
     public static void deleteFullRows()
     {
         for (int y = 0; y < h; ++y)
@@ -73,16 +84,15 @@ public class Playfield : MonoBehaviour
             {
                 deleteRow(y);
                 decreaseRowsAbove(y + 1);
-
                 scoreIncrease();
                 --y;
             } 
         }
     }
 
+    //Adds 50 points to the score
     public static void scoreIncrease()
     {
-        
         ScoringSystem.instance.IncreaseScore(50);
     }
 }

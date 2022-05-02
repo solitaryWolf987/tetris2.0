@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * Class to keep music running thorughout all the scenes,
+ * without restarting or playing over each other.
+ */
+
 public class DoNotDestroyOnLoad : MonoBehaviour
 {
     void Awake()
@@ -9,11 +14,10 @@ public class DoNotDestroyOnLoad : MonoBehaviour
         GameObject[] musicObject = GameObject.FindGameObjectsWithTag("music");
         if (musicObject.Length > 1)
         {
-            Debug.Log("Destroy on load: ");
+            //Debug.Log("Destroy on load: ");
             Destroy(this.gameObject);
         }
         DontDestroyOnLoad(this.gameObject);
-        //audioSource = GetComponent<AudioSource>();
-        Debug.Log("Don't Destroy on load: ");
+        //Debug.Log("Don't Destroy on load: ");
     }
 }

@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * Class to spawn and delete a sprite to gain extra time.
+ */
+
 public class ExtraTime : MonoBehaviour
 {
 
@@ -31,6 +35,9 @@ public class ExtraTime : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /**
+        * Spawns the sprite in a random location on the game board.
+        */
         if (ScoringSystem.instance.getCurrentScore() >= targetScore)
         {
             if (hasSpawned == false)
@@ -48,9 +55,10 @@ public class ExtraTime : MonoBehaviour
         }
     }
 
+    //Lets the update method know that the sprite can be spawned again when the condition is met
     public void destroyTime()
     {
-        Debug.Log("destroy");
+        //Debug.Log("destroy");
         hasSpawned = false;
     }
 }

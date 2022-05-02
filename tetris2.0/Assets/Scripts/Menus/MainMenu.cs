@@ -4,30 +4,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+/**
+ * Class to show the highscore text on the main menu using PlayerPrefs.
+ */
+
 public class MainMenu : MonoBehaviour
 {
 
     public Text scoreText;
 
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     void Awake()
     {
         float highScore = PlayerPrefs.GetFloat("highScore");
         scoreText.text = "High Score: " + highScore.ToString();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
 
 }

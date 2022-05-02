@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * Class to Update board positionings and allow movement of blocks.
+ */
+
 public class Group : MonoBehaviour
 {
     float lastFall = 0;
-    //float RecordedTime1 = 0;
-    //float RecordedTime2 = 0;
-    //float TimePassed = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,10 +31,6 @@ public class Group : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        //RecordedTime1 += 1f;
-        //TimePassed = RecordedTime1 - RecordedTime2;
-        
         // Left
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
@@ -83,13 +81,8 @@ public class Group : MonoBehaviour
         }
         // Fall
         else if (Input.GetKeyDown(KeyCode.DownArrow) || Time.timeSinceLevelLoad - lastFall >= 1) {
-
-            //Debug.Log("Time: " + Time.time);
-           // Debug.Log("lastFall: " + lastFall);
-            //Debug.Log(Time.time - lastFall);
             // Modify position
             transform.position += new Vector3(0, -1, 0);
-            //Debug.Log("Falling");
             // See if valid
             if (isValidGridPos())
             {
@@ -108,11 +101,10 @@ public class Group : MonoBehaviour
                 enabled = false;
             }
             lastFall = Time.timeSinceLevelLoad;
-            //Debug.Log("lastFall 2: " + lastFall);
         }
-        //RecordedTime2 += 0.997f;
     }
 
+    //Checks if the position of the block is valid.
     bool isValidGridPos()
     {
         foreach (Transform child in transform)
@@ -121,7 +113,7 @@ public class Group : MonoBehaviour
             // Not inside Border?
             if (!Playfield.insideBorder(v)) 
             {
-                Debug.Log("not in playfield");
+                //Debug.Log("not in playfield");
                 return false;
             }
 
@@ -135,6 +127,7 @@ public class Group : MonoBehaviour
         return true;
     }
 
+    //Updates the grid based on where the block is positioned.
     void updateGrid()
     {
         for (int y = 0; y < Playfield.h; ++y)

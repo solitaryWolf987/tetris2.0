@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * Class to spawn the blocks on the game grid when function is called.
+ */
 
 public class Spawner : MonoBehaviour
 {
@@ -26,6 +29,5 @@ public class Spawner : MonoBehaviour
         int i = Random.Range(0, groups.Length);
 
         Instantiate(groups[i], transform.position, Quaternion.identity);
-        Debug.Log("block spawned");
     }
 }

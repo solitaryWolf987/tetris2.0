@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * Class to allow the pause menu to be shown when the key esc is pressed.
+ * Pauses time when open, and plays when closed.
+ */
+
 public class PauseMenu : MonoBehaviour
 {
     

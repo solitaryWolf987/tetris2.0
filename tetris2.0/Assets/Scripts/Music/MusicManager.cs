@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/**
+ * Class that Finds and allows the audio source to be played.
+ * Allows for the volume slider to update the volume, and the volume be saved.
+ */
+
 public class MusicManager : MonoBehaviour
 {
     
@@ -26,14 +31,13 @@ public class MusicManager : MonoBehaviour
         
     }
 
-
     void Update()
     {
-        
         audioSource.volume = musicVolume;
         PlayerPrefs.SetFloat("volume", musicVolume);
     }
    
+    //Slider changes, the musicVolume variable is updated.
     public void updateVolume (float volume)
     {
         musicVolume = volume;
