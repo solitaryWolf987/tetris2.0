@@ -48,7 +48,7 @@ public class ExtraTime : MonoBehaviour
                 transform.position = randomPosition;
                 plusObject = Instantiate(TimeImage, transform.position, Quaternion.identity);
                 plusObject.name = "Plus game object";
-                Debug.Log(plusObject.name);
+                //Debug.Log(plusObject.name);
                 targetScore += 120;
                 hasSpawned = true;
             }
