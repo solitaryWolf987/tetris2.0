@@ -9,6 +9,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public GameObject[] groups;
+    public int blockShape;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,7 @@ public class Spawner : MonoBehaviour
     public void spawnNext()
     {
         int i = Random.Range(0, groups.Length);
-
+        blockShape = i;
         Instantiate(groups[i], transform.position, Quaternion.identity);
     }
 }
