@@ -9,10 +9,11 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public GameObject[] groups;
-    public int blockShape;
+    public int i;
     // Start is called before the first frame update
     void Start()
     {
+        i = Random.Range(0, groups.Length);
         spawnNext();
     }
 
@@ -27,8 +28,17 @@ public class Spawner : MonoBehaviour
     //Blocks are set in the Spawner object in the inspector
     public void spawnNext()
     {
-        int i = Random.Range(0, groups.Length);
-        blockShape = i;
+        //NextBlock.instance.Reset();
+        int j = Random.Range(0, groups.Length);
+        SpawnNextBlock(j);
         Instantiate(groups[i], transform.position, Quaternion.identity);
+        i = j;
+        
+    }
+
+    public void SpawnNextBlock(int next)
+    {
+        //Debug.Log(next);
+        NextBlock.instance.SpawnNextBlock(next);
     }
 }
